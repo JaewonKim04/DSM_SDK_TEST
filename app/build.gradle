@@ -41,5 +41,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.example.dsm_sdk_v1:dsmauth:1.1.5'
+    implementation 'com.semicolon.dsm_sdk_v1:dsmauth:1.2.6'
 }
