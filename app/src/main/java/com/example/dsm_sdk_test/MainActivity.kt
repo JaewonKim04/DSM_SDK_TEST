@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.semicolon.dsm_sdk_v1.DTOtoken
+import com.semicolon.dsm_sdk_v1.DTOuser
+import com.semicolon.dsm_sdk_v1.DsmSdk
 
 class MainActivity : AppCompatActivity() {
     val instance=DsmSdk.instance  //DsmSdk.instance 로 메서드를 많이 호출하기 떄문에 프로퍼티로 만들어 놓음
@@ -18,7 +21,7 @@ class MainActivity : AppCompatActivity() {
          */
         instance.initSDK("qwer","qwer","http://www.google.com")
 
-        val tokenCallback:(DTOuser?, Throwable?)->Unit={ token, error-> //토큰을 받아왔을때의 콜백함수
+        val tokenCallback:(DTOtoken?, Throwable?)->Unit={ token, error-> //토큰을 받아왔을때의 콜백함수
             if(error!=null){
                 Log.e("token",error.toString())
             }
